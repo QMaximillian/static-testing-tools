@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint src",
     "format": "npm run prettier -- --write",
-    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
+    "check-format": "npm run prettier -- --list-different",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
     "validate": "npm run lint && npm run prettier -- --list-different"
   },
   "keywords": [],
@@ -14,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.5.0",
-    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-prettier": "^3.6.0",
     "prettier": "^1.14.2"
   }
 }
